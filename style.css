@@ -1,0 +1,93 @@
+h1 {
+  text-align: center;
+  font-size: 80px;
+}
+
+body {
+  background-color: pink;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.ball {
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
+  border-color: black;
+  background-color: black;
+  cursor: pointer;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.message {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border-color: white;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 160px;
+  font-weight: 800;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  margin: 125px;
+}
+
+.question-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.question {
+  resize: none;
+  font-size: 20px;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+.shake-button {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-left: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+}
+
+.shake-button:active {
+  transform: translateY(4px)
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-10px);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  75% {
+    transform: translateX(-10px);
+  }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
