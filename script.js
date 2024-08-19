@@ -17,11 +17,12 @@ const messages = [
   "Better not tell you now."
 ];
 
-btn.disabled = true;
 
 function randomMessage() {
-  if (question.value.trim() === "") return;
-
+  if (question.value.trim() === "") {
+    alert("Please type in a question.");
+    return;
+  }
   const randomIndex = Math.floor(Math.random() * messages.length);
   message.textContent = messages[randomIndex];
 
